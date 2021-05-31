@@ -6,6 +6,7 @@ from Core.GUI import *
 # from Modules.AmmoRestack import AmmoRestack
 # from Modules.ShowMap import ShowMap
 # from Modules.AutoBanker import AutoBanker
+from Modules.Runemaker import Runemaker
 # from Modules.AutoFish import AutoFish
 # from Modules.AutoGrouping import AutoGrouping
 from Modules.AutoHeal import AutoHeal
@@ -75,6 +76,7 @@ class root:
         self.root.addButton('Auto Grouping', OpenAutoGrouping, [92, 23], [23, 236])
         self.root.addButton('Sort Loot', OpenSortLoot, [92, 23], [23, 262])
         self.root.addButton('Auto Banker', OpenAutoBanker, [92, 23], [23, 288])
+        self.root.addButton('Runemaker', OpenRunemaker, [92, 23], [23, 314])
         self.root.addButton('Auto Seller', OpenAutoSeller, [92, 23], [23, 340])
         self.root.addButton('FPS Changer', OpenFPSChanger, [92, 23], [23, 366])
 
@@ -111,7 +113,7 @@ class root:
 
         '''
             This Functions Is Called From Line 189, As Soon As Window Is Loaded.
-            
+
             It Sets For Program, The Variables Loaded From The Script You Chose,
             So That It Can Pass To The Modules That Are Opened.
         '''
@@ -229,6 +231,10 @@ def OpenShowMap():
 def OpenAutoBanker():
     print("AutoBanker In Development...")
     # AutoBanker(root)
+
+
+def OpenRunemaker():
+    Runemaker(ManaLocation, MOUSE_OPTION)
 
 
 def OpenAutoFish():
